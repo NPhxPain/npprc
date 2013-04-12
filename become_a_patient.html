@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>North Phoenix Pain Relief Center</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="stylesheets/application.less" rel="stylesheet/less" type="text/css">
+    <script type="text/javascript" src="javascripts/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="javascripts/less-1.3.3.min.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.validate.min.js"></script>
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link href="stylesheets/cusel.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="javascripts/cusel-min-2.5.js" type="text/javascript"></script>
+    <!--[if IE 6]>
+    <script type="text/javascript" src="javascripts/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script type="text/javascript">
+      DD_belatedPNG.fix(".cuselFrameRight");
+        jQuery(document).ready(function(){
+        jQuery(".cusel").each(
+        function(){
+            var w = parseInt(jQuery(this).width()),
+                scrollPanel = jQuery(this).find(".cusel-scroll-pane");
+            if(w>=scrollPanel.width())
+            {
+                jQuery(this).find(".jScrollPaneContainer").width(w);
+                scrollPanel.width(w);
+            }
+        });
+      });
+    </script>
+    <!--[endif]-->
+    <script>
+      $(function(){
+        var params = {
+          changedEl: ".lineForm select.sel80",
+          visRows: 5,
+          scrollArrows: true
+        }
+        cuSel(params);
+      });
+
+      $(document).ready(function(){
+        var $form = $("#appointment-form");
+        
+        $form.find('input[name=email_confirmation]').hide();
+        $form.validate();
+        $form.submit(function (event) {
+          event.preventDefault();
+
+          if ($form.valid()) {
+            $.ajax('https://npprc.herokuapp.com/appointment', { data: $form.serialize() }, {
+              dataType: 'jsonp'
+            });
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <div id="wrapper">
+      <header id="header">
+        <div class="inner">
+          <a href="index.html" class="logo"></a>
+          <p class="phn">Call us 602-482-2282</p>
+          <ul class="scl">
+            <li><a class="fb" target="_blank" href="https://www.facebook.com/NorthPhoenixPainRelief"></a></li>
+            <li><a class="tw" target="_blank" href="https://twitter.com/AZPainRelief"></a></li>
+            <li><a class="pn" target="_blank" href="http://pinterest.com/AZPainRelief/"></a></li>
+            <li><a class="in" target="_blank" href="http://linkedin.com/company/north-phoenix-pain-relief-center"></a></li>
+            <li><a class="yt" target="_blank" href="http://www.youtube.com/user/northphoenixpain"></a></li>
+            <li><a class="ml" href="mailto:northphoenixpainreliefcenter@yahoo.com"></a></li>
+          </ul>
+          <a href="physician_provider_referral.html" class="rfrrl">Physician/Attorney Referral</a>
+          <nav>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="treatments.html">Treatments</a></li>
+              <li><a href="become_a_patient.html">Become a patient</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="http://npprc.wordpress.com/">Blog</a></li>
+              <li><a href="contact_us.html">Contact us</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="ln"></div>
+      </header><!-- #header-->
+      <div id="container" class="bap">
+        <div class="bnnr">
+          <h1>Become a patient</h1>
+        </div>
+        <div class="content">
+          <article>
+            <h3>Insurance</h3>
+            <p>Our facility accepts, and is in network with a multitude of major insurance plans. These plans include:</p>
+            <ul>
+              <li>United HealthCare</li>
+              <li>Cigna</li>
+              <li>Aetna</li>
+              <li>Humana</li>
+              <li>BlueCross Blue Shield</li>
+              <li>Medicare</li>
+            </ul>
+            <p>Prior to your first visit to our office, we will verify your health insurance benefits so that when you sit down to consult with the Clinic Director, your specific coverage will be explained.  This allows you to make fully informed decisions about becoming a potential new patient at North Phoenix Pain Relief Center.</p>
+          </article>
+          <article>
+            <h3>Financial Policies</h3>
+            <p>Since your health insurance coverage is fully explained to you prior to starting care in our facility, there are absolutely no "financial" surprises.  If your insurance plan includes office Co-Pays or a Deductible, we have absolutely no problem working with you in order to develop comfortable methods of payment throughout, or at the end of treatment.</p>
+            <p>We stand by the fact that a <span>patient's financial obligations will not stand in the way</span> of receiving the highest quality of health care that our facility has to offer.</p>
+          </article>
+        </div>
+        <aside>
+          <div class="dl_form">
+            <div class="head">
+              <h6>New patient form</h6>
+            </div>
+            <a href="files/new_patient_form.pdf" target="_blank" class="btn">Download form</a>
+          </div>
+          <div class="rqst">
+            <div class="head">
+              <h6>Request appointment</h6>
+            </div>
+            <form id="appointment-form">
+              <label for="first_name">First name</label>
+              <input type="text" id="first_name" name="first_name" required="required">
+              <label for="last_name">Last name</label>
+              <input type="text" id="last_name" name="last_name" required="required">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" required="required">
+              <input name="email_confirmation">
+              <label for="phone">Phone</label>
+              <input type="text" id="phone" name="phone" required="required">
+              <label for="message">Message</label>
+              <textarea type="text" id="message" name="message" required="required"></textarea>
+              <div class="select">
+                <span class="lineForm">
+                  <select class="sel80" id="source" name="source" tabindex="2">
+                    <option selected value="">How you heard about us?</option>
+                    <option>Advertisement</option>
+                    <option>Email/NewsletterUnited</option>
+                    <option>Facebook</option>
+                    <option>Family or Friend</option>
+                    <option>Magazine Article</option>
+                    <option>Newspaper Story</option>
+                    <option>TV News</option>
+                    <option>Twitter</option>
+                    <option>Website/Search</option>
+                    <option>YouTube</option>
+                    <option>Other</option>
+                  </select>
+                </span>
+              </div>
+              <input type="submit" value="send request" class="btn">
+            </form>
+          </div>
+          <div class="faq">
+            <div class="head">
+              <h6>Popular question</h6>
+            </div>
+            <p>&mdash; How long will my appointments take?</p>
+            <a href="faq.html">Read the answer in FAQ</a>
+          </div>
+        </aside>
+      </div><!-- #content-->
+    </div><!-- #wrapper -->
+    <footer id="footer">
+      <div class="inner">
+        <div class="share">
+          <div class="fb-like" data-href="https://www.facebook.com/NorthPhoenixPainRelief" data-send="false" data-layout="button_count" data-width="115" data-show-faces="false"></div>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-via="twitterapi" data-lang="en">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+        <div class="map">
+          <iframe width="920" height="320" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=North+Phoenix+Pain+Relief+Center&amp;aq=&amp;sll=33.627231,-112.012114&amp;sspn=0.015223,0.033023&amp;ie=UTF8&amp;hq=North+Phoenix+Pain+Relief+Center&amp;hnear=&amp;t=m&amp;cid=10962981693543278355&amp;ll=33.649779,-112.010593&amp;spn=0.045727,0.102825&amp;z=13&amp;iwloc=A&amp;output=embed"></iframe>
+          <!--<iframe width="600" height="320" src="http://regiohelden.de/google-maps/map.php?width=600&amp;height=320&amp;hl=en&amp;q=3202%20East%20Greenway%20Road%2C%20Suite%201619%20Phoenix%2C%20AZ%2085032%20(602)%20482-2282+(%20North%20Phoenix%20Pain%20Relief%20Center)&amp;sll=33.627231,-112.012114&amp;ie=UTF8&amp;t=&amp;z=16&amp;iwloc=A&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>-->
+        </div>
+        <p class="cprght">North Phoenix Pain Relief Center. 2013, All rights reserved.</p>
+        <p class="md_by">Made by <a href="http://pieoneers.com">Pieoneers</a></p>
+      </div>
+    </footer><!-- #footer -->
+  </body>
+</html>

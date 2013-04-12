@@ -1,0 +1,38 @@
+.rounded (@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -o-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+
+.rounded (@upper_left, @upper_right, @bottom_right, @bottom_left) {
+  border-radius: @arguments;
+  -moz-border-radius: @arguments;
+  -o-border-radius: @arguments;
+  -webkit-border-radius: @arguments;
+}
+
+.box-shadow(@arguments) {
+  box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -o-box-shadow: @arguments;
+}
+
+
+.box-shadow (@x, @y, @blur, @dilation,@color) {
+  box-shadow: @x @y @blur @dilation @color;
+  -moz-box-shadow: @x @y @blur @dilation @color;
+  -o-box-shadow: @x @y @blur @dilation @color;
+  -webkit-box-shadow: @x @y @blur @dilation @color;
+}
+
+.box-shadow(none) {
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.underline(@alpha) {
+  border-bottom: 1px solid rgba(64,168,245,@alpha);
+}

@@ -1,0 +1,76 @@
+#container.a {
+  .bnnr {
+    background: url(../images/banner3.jpg) no-repeat;
+  }
+  article {
+    .hddn_ps {
+      display: none;
+    }
+    .team {
+      margin-bottom: 0 !important;
+
+      li {
+        display: inline-block;
+        background: none !important;
+        padding: 0 !important;
+        width: 140px;
+        height: 198px;
+        margin-right: 68px;
+        margin-bottom: 20px;
+
+        img {
+          display: block;
+          margin-bottom: 10px;
+        }
+        p {
+          text-align: center;
+          line-height: 16pt !important;
+          font-size: 11pt;
+          width: 170px;
+          position: absolute;
+          left: -15px;
+
+          span {
+            font-style: italic;
+            font-size: 10pt;
+            display: block;
+            text-transform: none !important;
+          }
+        }
+        &:nth-child(3), &:nth-child(6) {
+          margin-right: 0 !important;
+        }
+      }
+    }
+    .media {
+      margin-bottom: 80px;
+    }
+  }
+  aside {
+    position: absolute;
+    top: 280px;
+    right: 40px;
+
+    .facts {
+      min-height: 630px;
+
+      ul {
+        margin-top: 20px;
+        li {
+          line-height: 23pt;
+          margin-bottom: 20px;
+          width: 268px;
+
+          a {
+            color: @gray_d;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

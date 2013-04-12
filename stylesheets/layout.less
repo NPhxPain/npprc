@@ -1,0 +1,460 @@
+@font-face {
+  font-family: 'AlexBrush';
+  src: url('../fonts/AlexBrush-Regular-OTF.eot');
+  src: url('../fonts/AlexBrush-Regular-OTF.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/AlexBrush-Regular-OTF.otf') format('opentype'),
+       url('../fonts/AlexBrush-Regular-OTF.ttf') format('truetype'),
+       url('../fonts/AlexBrush-Regular-OTF.svg#CreativeBlockBBBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+	height: 100%;
+
+	body {
+    font-family: Georgia, sans-serif;
+    font-weight: 400;
+    width: 100%;
+    height: 100%;
+
+    header, nav, section, article, aside, footer {
+      display: block;
+    }
+    a {
+      color: blue;
+      outline: none;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    img {
+      border: none;
+    }
+    input {
+      vertical-align: middle;
+    }
+    #wrapper {
+      width: 100%;
+      margin: 0 auto;
+      min-height: 100%;
+      height: auto !important;
+      height: 100%;
+
+      #header {
+        height: 160px;
+        font-size: 12pt;
+        line-height: 14.5pt;
+
+        .inner {
+          width: 940px;
+          padding: 0 40px;
+          margin: 0 auto;
+
+          .logo {
+            display: block;
+            width: 261px;
+            height: 98px;
+            background: url(../images/logo.png) no-repeat @brown;
+            margin: 0 auto;
+            z-index: 100;
+          }
+          .phn {
+            top: 20px;
+            position: absolute;
+            color: @gold;
+          }
+          .rfrrl {
+            position: absolute;
+            right: 40px;
+            top: 60px;
+            color: @gold;
+            font-style: italic;
+            text-decoration: none;
+            font-size: 10pt;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+          .scl {
+            position: absolute;
+            top: 10px;
+            right: 40px;
+
+            li {
+              margin: 0 3px;
+              display: inline-block;
+
+              &:first-child {
+                margin-left: 0;
+              }
+              &:last-child {
+                margin-right: 0;
+              }
+              a {
+                display: block;
+                width: 30px;
+                height: 30px;
+                background-image: url(../images/sprite_social.png);
+                background-repeat: no-repeat;
+
+                &.fb {
+                  background-position: 0 50%;
+                }
+                &.tw {
+                  background-position: -39px 50%;
+                }
+                &.pn {
+                  background-position: -78px 50%;
+                }
+                &.in {
+                  background-position: -117px 50%;
+                }
+                &.yt {
+                  background-position: -155px 50%;
+                }
+                &.ml {
+                  background-position: -196px 50%;
+                }
+              }
+            }
+          }
+          nav {
+            ul {
+              margin: 20px 77px;
+              display: inline-block;
+              cursor: default;
+
+              li {
+                margin: 0 31px;
+                display: inline-block;
+
+                &:first-child {
+                  margin-left: 0;
+                }
+                &:last-child {
+                  margin-right: 0;
+                }
+                a {
+                  color: @gray_d;
+                  text-decoration: none;
+
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .ln {
+          position: absolute;
+          border-top: 1px solid @goldborder;
+          top: 50px;
+          width: 100%;
+        }
+      }
+      #container {
+        width: 940px;
+        padding: 0 40px 460px;
+        margin: 0 auto;
+        color: @gray_d;
+
+        .bnnr {
+          display: block;
+          width: 940px;
+          height: 240px;
+          margin-bottom: 40px;
+
+          h1 {
+            font-family: AlexBrush, sans-serif;
+            font-size: 90pt;
+            text-align: center;
+            color: white;
+            text-shadow: 1px 2px 1px rgba(0,0,0,0.47);
+            padding: 60px 0;
+          }
+        }
+        .content {
+          a {
+            color: @gold;
+            cursor: pointer;
+          }
+          h3 {
+            font-size: 30pt;
+            margin-bottom: 40px;
+          }
+          article {
+            color: @gray_d;
+            width: 620px;
+            margin-bottom: 40px;
+            p, li {
+              line-height: 23pt;
+              font-size: 12pt;
+            }
+            p {
+              margin-bottom: 20px;
+
+              span {
+                text-transform: uppercase;
+              }
+            }
+            ul {
+              margin-bottom: 20px;
+
+              li {
+                padding-left: 26px;
+                background: url(../images/point.png) no-repeat 4px 11px;
+              }
+            }
+          }
+        }
+        aside {
+          width: 300px;
+
+          .dl_form, .call, .new_tstmnl {
+            background-color: @brown;
+            padding: 15px 15px 30px;
+            margin-bottom: 20px;
+            font-size: 11pt;
+
+            h6 {
+              color: @gold;
+              text-shadow: 0 1px 1px #1c1b1a;
+            }
+            .btn {
+              margin: 12px auto 0;
+            }
+          }
+          .facts, .faq, .hours, .rqst, .phlsph {
+            border: 1px solid @goldborder;
+            padding: 15px 15px 30px;
+            margin-bottom: 20px;
+            font-size: 11pt;
+          }
+          .phlsph {
+            p, li, a {
+              margin: 20px 0;
+              line-height: 20px;
+              
+            }
+            ul {
+              margin-bottom: 20px;
+
+              li {
+                padding-left: 26px;
+                background: url(../images/point.png) no-repeat 4px 7px;
+              }
+            }
+            a {
+              color: @gold;
+            }
+          }
+          .faq {
+            margin-bottom: 80px !important;
+            p {
+              padding: 15px 0;
+              font-style: italic;
+              font-size: 11pt;
+              line-height: 14pt;
+            }
+            a {
+              color: @gold;
+            }
+          }
+        }
+      }
+    }
+    form {
+
+      label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 11pt;
+      }
+      input[type="text"], input[type="email"], textarea {
+        border: 1px solid @goldborder;
+        width: 256px;
+        font-family: Georgia, sans-serif;
+        font-size: 11pt;
+        padding: 5px;
+        line-height: 24pt;
+        margin-bottom: 18px;
+      }
+      input[type="text"], input[type="email"] {
+        height: 20px;
+      }
+      textarea {
+        height: 60px;
+        resize: vertical;
+      }
+      .select {
+        height: 32px;
+        margin-bottom: 20px;
+
+        .sel80 {
+          width: 268px;
+        }
+      }
+      input[type="submit"] {
+        margin: 0 auto;
+      }
+      label.error {
+        margin: -10px 0 30px;
+        color: red;
+      }
+    }
+    .head {
+      border-bottom: 1px solid @goldborder;
+
+      h6 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        line-height: 30px;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+    }
+    .map {
+      background-color: white;
+      display: inline-block;
+      margin-right: 16px;
+      vertical-align: top;
+
+      iframe {
+        margin: 10px;
+        position: relative;
+      }
+    }
+    .btn {
+      display: block;
+      width: 268px;
+      height: 57px;
+      font-size: 15pt;
+      color: @brown;
+      text-align: center;
+      line-height: 53px;
+      text-transform: uppercase;
+      box-shadow: inset 0px -4px 0 #9dc1c8;
+      background-color: @blue;
+      text-decoration: none;
+      letter-spacing: 2px;
+      font-family: Georgia, sans-serif;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken(@blue,5%);
+        box-shadow: inset 0px -4px 0 darken(#9dc1c8,5%);
+      }
+      &:active {
+        background-color: darken(@blue,10%);
+        box-shadow: inset 0px -4px 0 darken(#9dc1c8,10%);
+      }
+    }
+    #footer {
+      width: 100%;
+      margin: -460px auto 0;
+      height: 460px;
+      background: @gray_l;
+      position: relative;
+
+      .inner {
+        width: 940px;
+        padding: 60px 40px 0;
+        margin: 0 auto;
+        height: 400px;
+
+        .share {
+          margin: -35px 0 15px;
+          text-align: center;
+        }
+
+        .fb-like, .twitter-share-button {
+          vertical-align: top;
+
+        }
+
+        .twitter {
+          width: 270px;
+          height: 312px;
+          background-color: white;
+          display: inline-block;
+          vertical-align: top;
+          padding: 15px;
+
+          .tw.head {
+            h6 {
+              display: inline-block;
+              margin-left: 25px;
+            }
+          }
+        }
+        p {
+          font-family: Open Sans, sans-serif;
+          font-size: 9pt;
+          color: @gray;
+          margin-top: 20px;
+
+          &.md_by {
+            position: absolute;
+            margin-top: -12px;
+            right: 40px;
+          }
+          a {
+            color: @gray;
+          }
+        }
+      }
+    }
+    .tstmnl_wndw {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      background-color: rgba(0,0,0,0.7);
+      z-index: 2000;
+      display: none;
+
+      .tstmnl_form {
+        width: 430px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 15px;
+        top: 145px;
+
+        form {
+          padding: 15px;
+
+          input:not([type="submit"]), textarea {
+            width: 388px !important;
+          }
+        }
+        .close {
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+          z-index: 8040;
+          display: block;
+          background-image: url(../images/close.png);
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          padding: 15px;
+          background-color: white;
+        }
+      }
+    }
+    .show {
+      display: block !important;
+    }
+  }
+}

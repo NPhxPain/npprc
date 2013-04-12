@@ -1,0 +1,202 @@
+#container.tmt {
+  .bnnr {
+    background: url(../images/banner7.jpg) no-repeat;
+    display: table !important;
+
+    .tmt_head {
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.75);
+      display: table-cell;
+      vertical-align: middle;
+
+      h2 {
+        font-size: 42pt;
+        letter-spacing: 8px;
+        color: @blue;
+        text-align: center;
+        margin-bottom: 20px;
+        padding: 0 20px;
+      }
+      span {
+        position: absolute;
+        display: block;
+        text-align: center;
+        font-size: 18pt;
+        font-style: italic;
+        width: 100%;
+        color: @gold;
+      }
+    }
+  }
+  .content {
+    article {
+      left: 260px;
+      width: 680px !important;
+      min-height: 1502px;
+      margin-bottom: 80px !important;
+
+      h4 {
+        font-size: 18pt;
+        line-height: 21pt;
+        margin-bottom: 20px;
+      }
+      h5 {
+        font-size: 16pt;
+        line-height: 20pt;
+        margin-bottom: 20px;
+      }
+      a {
+        float: left;
+        clear: both;
+        display: block;
+        z-index: 100;
+        margin-right: 20px;
+        margin-bottom: 10px;
+      }
+      ul.inline {
+        li {
+          display: inline-block !important;
+          width: 300px !important;
+        }
+      }
+      #slide_box {
+        margin-bottom: 20px;
+
+        #slides {
+          width:514px;
+          height:420px;
+          border: 1px solid #9f9774;
+          padding: 10px;
+          margin: 0 auto 20px;
+
+          .slides_container {
+            overflow:hidden;
+            display:none;
+            margin: 0 auto;
+
+            a {
+              height: 360px;
+              width: 514px;
+              display:block;
+              margin: 0 auto;
+
+              img {
+                display:block;
+                margin: 0 auto;
+                float: none !important;
+              }
+            }
+          }
+          .pagination {
+            margin-bottom: 0 !important;
+
+            li {
+              margin: 2px;
+              border: 2px solid transparent;
+              list-style: none;
+              display: inline-block;
+              background: none !important;
+              padding: 0 !important;
+
+              a {
+                display: block;
+                width:58px;
+                height: 44px;
+                margin:2px;
+              }
+              &.current a {
+                border:2px solid #9f9774;
+                margin:0;
+              }
+            }
+          }
+        }
+        label {
+          display: block;
+          text-align: center;
+          font-size: 12pt;
+          font-style: italic;
+        }
+      }
+      table {
+        width: 100%;
+        border-bottom: 1px solid @goldborder;
+        margin-bottom: 20px;
+
+        .head {
+          td {
+            border: 1px solid @goldborder;
+            font-style: italic;
+          }
+        }
+
+        tr:nth-child(even) {
+          background-color: #f9f8f1;
+        }
+        tr:nth-child(odd) {
+          background-color: white;
+        }
+        td {
+          border-left: 1px solid @goldborder;
+          border-right: 1px solid @goldborder;
+          height: 40px;
+          text-align: center;
+          vertical-align: middle;
+        }
+      }
+      .quote {
+        font-size: 18pt;
+        font-style: italic;
+        line-height: 21pt;
+        color: @gold;
+        float: right;
+        padding: 10px;
+        width: 230px;
+      }
+      .anchor {
+        display: inline-block;
+        float: none;
+      }
+    }
+  }
+  aside {
+    position: absolute;
+    top: 280px;
+    left: 40px;
+    width: 220px !important;
+
+    .tmt_list {
+      border: 1px solid @goldborder;
+      padding: 10px 0;
+
+      dl {
+        margin-bottom: 20px;
+
+        dt {
+          font-weight: bold;
+        }
+
+        dt, dd a{
+          padding: 4px 20px;
+          line-height: 12pt;
+        }
+        dd {
+          a {
+            display: block;
+            color: @gold;
+            text-decoration: none;
+
+            &:hover, &.chosen {
+              background: @gold;
+              color: white;
+            }
+            &.chosen {
+              cursor: default;
+            }
+          }
+        }
+      }
+    }
+  }
+}

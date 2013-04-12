@@ -1,0 +1,159 @@
+#container.i {
+  #slides {
+    margin-bottom: 390px;
+
+    .slides_container {
+      width:940px;
+      height:541px;
+      margin-bottom: 330px;
+
+      div {
+        width:940px;
+        height:541px;
+        display:block;
+
+        h2 {
+          top: 0;
+          font-size: 42pt;
+          margin-top: 5px;
+          text-shadow: 1px 2px 1px rgba(0,0,0,0.12);
+          position: absolute;
+          font-weight: 100;
+          letter-spacing: 3px;
+          font-variant: small-caps;
+
+          span {
+            display: inline-block;
+            font-family: AlexBrush;
+            font-size: 140pt;
+            top: 15px;
+            font-variant: normal;
+
+            &.wide {
+              margin-left: 120px;
+            }
+          }
+        }
+        h4 {
+          top: 191px;
+          position: absolute;
+          text-shadow: 1px 2px 1px rgba(0,0,0,0.47);
+        }
+      }
+    }
+  }
+  h4 {
+    font-size: 18pt;
+    line-height: 24pt;
+  }
+  h2, h4 {
+    z-index: 100;
+    color: white;
+    width: 100%;
+    text-align: center;
+  }
+  .pagination {
+    a {
+      display: none;
+    }
+  }
+  .trtmnt_tp {
+    width: 780px;
+    height: 561px;
+    background-color: rgba(66, 64, 62, 0.95);
+    position: absolute;
+    margin-top: -613px;
+    z-index: 1000;
+    margin-left: -390px;
+    left: 50%;
+
+    h4 {
+      color: @blue;
+      top: 34px;
+      text-shadow: 1px 2px 1px rgba(0,0,0,0.47);
+    }
+    ul {
+      padding-left: 70px;
+      top: 70px;
+
+      li {
+        display: inline-block;
+        vertical-align: top;
+
+        dl {
+          dt {
+            text-transform: uppercase;
+            font-size: 12pt;
+            text-shadow: 0 1px 1px #1c1b1a;
+            color: @gold;
+            line-height: 16pt;
+            letter-spacing: 3px;
+            margin-bottom: 16px;
+          }
+          dd {
+            text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+            font-size: 12pt;
+            color: white;
+            line-height: 16pt;
+            margin-bottom: 9px;
+            text-decoration: none;
+          }
+        }
+        &:first-child {
+          margin-right: 96px;
+        }
+        &:nth-child(2) {
+          margin-right: 70px;
+        }
+        &:last-child {
+          position: absolute;
+          left: 70px;
+          top: 150px;
+        }
+      }
+    }
+    .btn {
+      width: 300px !important;
+      margin: 113px auto 12px;
+    }
+    p {
+      font-size: 9pt;
+      text-align: center;
+      color: @blue;
+      font-family: Open Sans, sans-serif;
+    }
+  }
+  .team {
+    margin-bottom: 30px;
+    color: @gray_d;
+    position: relative;
+  }
+  .team_list {
+    margin-bottom: 35px;
+
+    li {
+      display: inline-block;
+      margin: 0 -2px;
+      line-height: 23pt;
+
+      &:nth-child(odd) {
+        background: url(../images/point.png) no-repeat 100% 50%;
+        padding-right: 30px;
+        width: 435px;
+        text-align: right;
+        margin-left: 9px;
+      }
+      &:nth-child(even){
+        padding-left: 23px;
+        width: 440px;
+        text-align: left;
+      }
+    }
+  }
+  .media {
+    border: 1px solid @goldborder;
+    padding: 10px;
+    width: 600px;
+    margin: 0 auto 80px;
+  }
+}

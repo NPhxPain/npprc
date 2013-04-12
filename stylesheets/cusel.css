@@ -1,0 +1,136 @@
+.cusel,
+.cuselFrameRight,
+.jScrollPaneDrag,
+.jScrollArrowUp,
+.jScrollArrowDown {
+	background: url(../images/selects.png) no-repeat;
+}
+.cusel {
+	height: 29px;
+	background-position: left top;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	font-size: 11pt;
+	z-index: 1;
+  	margin-top: 1px;
+}
+.cuselFrameRight {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 42px;
+	background-position: right top;
+}
+
+.cuselText {
+	height: 20px;
+	padding: 7px 0 0 5px;
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	font-size: 11pt;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.cuselText {
+	height: 22px;
+}
+.cusel span {
+	display: block;
+	cursor: pointer;
+	white-space: nowrap;
+	padding: 5px 15px 5px 5px;
+	zoom: 1;
+}
+.cusel span:hover,
+.cusel .cuselOptHover {
+	background: #9f9774;
+	color: white;
+}
+.cusel .cuselActive {
+	background: #9f9774;
+	color: white;
+	cursor: default;
+}
+
+.cuselOpen {
+	z-index: 999;
+}
+.classDisCusel .cuselText {
+	cursor: default;
+}
+
+.cusel .cusel-scroll-wrap {
+	display: block;
+	visibility: hidden;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	background: white;
+	min-width: 100%;
+	width: auto;
+  	font-size: 11pt;
+}
+.cusel .jScrollPaneContainer {
+	position: relative;
+	overflow: hidden;
+	z-index: 5;
+	border: 1px solid #9f9774;
+}
+
+.cusel .jScrollPaneTrack {
+	height: 100%;
+	width: 7px !important;
+	background: #9f9774;
+	position: absolute;
+	top: 0;
+	right: 5px;
+}
+.cusel .jScrollPaneDrag {
+	position: absolute;
+	background-position: -40px -29px;
+	cursor: pointer;
+	width: 15px !important;
+	height: 32px !important;
+	right: -4px;
+
+}
+
+.cusel .jScrollPaneDragTop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.cusel .jScrollPaneDragBottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+}
+.cusel .jScrollArrowUp {
+	position: absolute;
+	top: 0;
+	right: 2px;
+	width: 26px;
+	height: 12px;
+	cursor: pointer;
+	background-position: -2px -30px;
+	overflow: hidden;
+}
+.cusel .jScrollArrowDown {
+	width: 25px;
+	height: 12px;
+	position: absolute;
+	top: auto;
+	bottom: 0;
+	right: 3px;
+	cursor: pointer;
+	background-position: -20px -30px;
+	overflow: hidden;
+}

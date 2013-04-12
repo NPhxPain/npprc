@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>North Phoenix Pain Relief Center</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="stylesheets/application.less" rel="stylesheet/less" type="text/css">
+    <script type="text/javascript" src="javascripts/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="javascripts/less-1.3.3.min.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.validate.min.js"></script>
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script>
+      $(document).ready(function(){
+        var $form = $("#testimonial-form");
+        
+        $form.find('input[name=email_confirmation]').hide();
+        $form.validate();
+        $form.submit(function (event) {
+          event.preventDefault();
+
+          if ($form.valid()) {
+            $.ajax('https://npprc.herokuapp.com/testimonial', { data: $form.serialize() }, {
+              dataType: 'jsonp'
+            });
+          }
+        });
+      });
+
+      $(document).ready(function(){
+        $(".new_tstmnl .btn").click(function(event) {
+          event.preventDefault();
+          $(".tstmnl_wndw").addClass("show");
+        });
+        $(".close").click(function() {
+          $(".tstmnl_wndw").removeClass("show");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <div id="wrapper">
+      <header id="header">
+        <div class="inner">
+          <a href="index.html" class="logo"></a>
+          <p class="phn">Call us 602-482-2282</p>
+          <ul class="scl">
+            <li><a class="fb" target="_blank" href="https://www.facebook.com/NorthPhoenixPainRelief"></a></li>
+            <li><a class="tw" target="_blank" href="https://twitter.com/AZPainRelief"></a></li>
+            <li><a class="pn" target="_blank" href="http://pinterest.com/AZPainRelief/"></a></li>
+            <li><a class="in" target="_blank" href="http://linkedin.com/company/north-phoenix-pain-relief-center"></a></li>
+            <li><a class="yt" target="_blank" href="http://www.youtube.com/user/northphoenixpain"></a></li>
+            <li><a class="ml" href="mailto:northphoenixpainreliefcenter@yahoo.com"></a></li>
+          </ul>
+          <a href="physician_provider_referral.html" class="rfrrl">Physician/Attorney Referral</a>
+          <nav>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="treatments.html">Treatments</a></li>
+              <li><a href="become_a_patient.html">Become a patient</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="http://npprc.wordpress.com/">Blog</a></li>
+              <li><a href="contact_us.html">Contact us</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="ln"></div>
+      </header><!-- #header-->
+      <div id="container" class="tml">
+        <div class="bnnr">
+          <h1>Testimonials</h1>
+        </div>
+        <div class="content">
+          <article>
+            <ul>
+              <li>
+                <p>I have been one of the top competitive powerlifters for several years.  My injuries seemed like something I would never overcome especially without surgery.  My experience with the clinic has been so positive.  They are very gracious and humble while providing relief that I did not believe existed.</p>
+                <p class="author">&mdash; Shawn B. <span>Body Builder, age:40</span></p>
+              </li>
+              <li>
+                <p>Working at school wasn’t very easy with my neck and back injury until I found Dr. Pierce and his staff.  From day one they all showed professionalism but most of all they showed a true concern and compassion for their patients.  Dr. Pierce tries to improve every aspect of our lives.  I can certainly say that I feel healthier, happier, and self-confident enjoying my renewed life without pain.</p>
+                <p class="author">&mdash; Aida Z. <span>Teacher, age:44</span></p>
+              </li>
+              <li>
+                <p>The staff is the best part of my visits. Along with feeling better, which I do!</p>
+                <p class="author">&mdash; Anthony H. <span>Special Ed, age:63</span></p>
+              </li>
+              <li>
+                <p>I was introduced to this facility at a Safeway Health fair – have been truly blessed to be a patient! They are caring and attentive to my pain needs. I have had a lot of different medical issues and they have been able to either resolve them or make them better. The staff are awesome!!</p>
+                <p class="author">&mdash; Raquel B. <span>Pharmacy Technician, age:45</span></p>
+              </li>
+              <li>
+                <p>I have had neck and back pain for as long as I can remember. The North Phoenix Pain Relief Center has been exactly what I needed and I am feeling significantly better (and sleeping better too!) The staff is extremely courteous, and I couldn’t recommend them highly enough.</p>
+                <p class="author">&mdash; Charlie C. <span>Video Game Q.A., age:30</span></p>
+              </li>
+              <li>
+                <p>My stress and pain on my back was very bad when I came like 6 month ago today. I just like to be here for the trigger point therapy to relax and enjoy my life better.</p>
+                <p class="author">&mdash; Miriam A. <span>General Manager, age:36</span></p>
+              </li>
+              <li>
+                <p>I love North Phoenix Pain, they all care about the patients. They are all friendly and willing to help I feel better when I leave everytime.</p>
+                <p class="author">&mdash; Teryl C. <span>Patient Collections, age: No Comment</span></p>
+              </li>
+              <li>
+                <p>I have been suffering from lower back pain for more than 30 years and shoulder pain for about 15 years. Finally thanks to the folks at Phoenix Pain Center I am getting relief.</p>
+                <p class="author">&mdash; Harry C. <span>Retired, age:65</span></p>
+              </li>
+              <li>
+                <p>Helping with my scoliosis, making my back feel better. The injections make my back and shoulders feel better.</p>
+                <p class="author">&mdash; Amy C. <span>Cashier, age:19</span></p>
+              </li>
+              <li>
+                <p>Helping with my scoliosis, making my back feel better. The injections make my back and shoulders feel better.</p>
+                <p class="author">&mdash; Amy C. <span>Cashier, age:19</span></p>
+              </li>
+              <li>
+                <p>Helped with my back and knees. Helped my curved spine.</p>
+                <p class="author">&mdash; Emily C. <span>Cashier, age:17</span></p>
+              </li>
+              <li>
+                <p>I first heard about Dr. Pierce after I injured myself lifting weights. A friend told me how he used to have back problems until Dr. Pierce helped him in such a short time. Every time I have come in I feel like I’m getting top notch service, everyone is always happy and wanting to help. I won’t go anywhere else now.</p>
+                <p class="author">&mdash; Tyler A. <span>Server, age:27</span></p>
+              </li>
+              <li>
+                <p>I came in having moderate pain all along my spine. Now after 3 weeks of therapy it has helped maybe 30 – 40 % of the pain disappear. By the end of my treatment I hope to be 90 – 100 % cured of my back problems!</p>
+                <p class="author">&mdash; Karlee S. <span>Server, age:19</span></p>
+              </li>
+              <li>
+                <p>Everyone is genuinely interested in therapies. A very personable experience every time I come in all procedures are explained. I’m glad I am getting this help!</p>
+                <p class="author">&mdash; Yvonne A. <span>Title officer, age:56</span></p>
+              </li>
+              <li>
+                <p>I was skeptical about Chiropractic Therapy. Dr. Pierce and his staff are very king, professional, and knowledgeable. I feel much better my pain has been eased (from car accident) and my quality of life has been improved.</p>
+                <p class="author">&mdash; Robert M. <span>Security Manager, age:38</span></p>
+              </li>
+              <li>
+                <p>This place is great. When I started coming. I always had lower back pain and had constant headaches. Now I look forward to getting out of bed in the morning because no more head aches and back aches are gone!</p>
+                <p class="author">&mdash; Will <span>I.T. Specialist</span></p>
+              </li>
+              <li>
+                <p>From day one there has been a considerable notice in my back issues. Though I am continuing my therapy, my lower back (in my opinion) is close to being healed. I still have some random strains and pains but with North Phoenix Pain Relief Centers expertise, I am confidant my recovery to 100% is in the near future! P.S. the staff and Dr are AMAZING!!!!</p>
+                <p class="author">&mdash; Joe Lewis <span>Realtor, age:37</span></p>
+              </li>
+              <li>
+                <p>Words cannot express the relief I have felt from my sessions at North Phoenix Pain Relief Center. The entire staff is beyond incredible. Thank you Dr. Pierce and the whole crew!!</p>
+                <p class="author">&mdash; Marina Hogan <span>Food Demonstrator, age:64</span></p>
+              </li>
+              <li>
+                <p>For the past several years, my life has been controlled by degenerative disk disease and osteoarthritis. Most days, even walking was painful. I tried several rounds of nerve blocks and nerve ablations. Nothing worked for very long and I was finally reduced to taking heavy-duty pain pills to get through my everyday life. I was just sure that I would be unable to function at all in the very near future. At that point, I started being treated by the North Phoenix Pain Relief Center and began their program of pain management. At this time, I’m almost completely pain-free and my life has become my own again, not ruled by pain. It’s such a relief and a blessing.</p>
+                <p class="author">&mdash; Patty F. <span>Care giver, age:61</span></p>
+              </li>
+              <li>
+                <p>I came to the North Phoenix Pain Relief Center for problems with almost constant headaches as well as neck and back pain. Besides my in office treatment plan I was also given several tools to use at home. Allergy testing found unexpected food intolerance which I’ve removed from my diet. Within a few days I was feeling better and after a few months my daily headaches were gone. Headaches only occur 2 or 4 times a month now and my back and neck feel much. Dr. Pierce and all the staff are friendly and great at what they do.</p>
+                <p class="author">&mdash; Michael S. <span>Computers, age:39</span></p>
+              </li>
+              <li>
+                <p>I have been a patient for 2 years I and I have seen a tremendous amount of relief in my lower back due to the trigger pain, adjustments, and injections. I am able to do my fitness program with no side effects!</p>
+                <p class="author">&mdash; Linda L. <span>Administration, age:60</span></p>
+              </li>
+              <li>
+                <p>I had lower back / hip issues that left me bed ridden for a week at a time, even with moving light weight objects. Now I’m back to a youthful mobility and pain – free.</p>
+                <p class="author">&mdash; Michelle B. <span>Music Teacher, age:36</span></p>
+              </li>
+              <li>
+                <p>I have been a patient for about a year now and North Phoenix Pain Relief Center is an integral part of my health regiment. Having access to excellent medical care and expert chiropractic services has truly sustained my physical well being. The staff is always courteous and amazingly talented. I feel health after every visit.</p>
+                <p class="author">&mdash; Michelle D. <span>IT network administration, age:51</span></p>
+              </li>
+              <li>
+                <p>Walking without pain was the best results from the injections. Pain which use to radiate down the front of my legs really caused much distress during my busy work days. This is no longer the case. I was afraid I would not keep up with my job as a maintenance worker. I no longer have to think about making such a drastic change especially at 58 years old. YEAH!</p>
+                <p class="author">&mdash; Jean S. <span>Maintenance, age:58</span></p>
+              </li>
+              <li>
+                <p>They have restored my quality of life that I did not have for the last 5 years thank you!!</p>
+                <p class="author">&mdash; John D. <span>Baseball Coach, age:48</span></p>
+              </li>
+              <li>
+                <p>I use to have low back pain that prevented me from enjoying all the active things I love to do. I have had great results at North Phoenix Pain Relief Center. The staff is wonderful and they have helped me get back into the great outdoors pain free!</p>
+                <p class="author">&mdash; Nicole B. <span>Occupational Therapist, age:28</span></p>
+              </li>
+            </ul>
+          </article>
+        </div>
+        <aside>
+          <div class="new_tstmnl">
+            <div class="head">
+              <h6>Your testimonial</h6>
+            </div>
+            <a href="" class="btn">write review</a>
+          </div>
+          <div class="phlsph">
+            <div class="head">
+              <h6>Our philosophy</h6>
+            </div>
+            <p>
+              Our unique model for providing patients with the highest quality of care possible involves two important components:
+            </p>
+            <ul>
+              <li>We utilize the most current technology and treatment protocols</li>
+              <li>Every patient receives direct care from our team of doctors, each with different specialties for treating their condition.</li>
+            </ul>
+            <a href="about.html">Read about us</a>
+          </div>
+          <div class="faq">
+            <div class="head">
+              <h6>Popular question</h6>
+            </div>
+            <p>&mdash; How long will my appointments take?</p>
+            <a href="faq.html">Read the answer in FAQ</a>
+          </div>
+        </aside>
+      </div><!-- #content-->
+    </div><!-- #wrapper -->
+    <footer id="footer">
+      <div class="inner">
+        <div class="share">
+          <div class="fb-like" data-href="https://www.facebook.com/NorthPhoenixPainRelief" data-send="false" data-layout="button_count" data-width="115" data-show-faces="false"></div>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-via="twitterapi" data-lang="en">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+        <div class="map">
+          <iframe width="920" height="320" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=North+Phoenix+Pain+Relief+Center&amp;aq=&amp;sll=33.627231,-112.012114&amp;sspn=0.015223,0.033023&amp;ie=UTF8&amp;hq=North+Phoenix+Pain+Relief+Center&amp;hnear=&amp;t=m&amp;cid=10962981693543278355&amp;ll=33.649779,-112.010593&amp;spn=0.045727,0.102825&amp;z=13&amp;iwloc=A&amp;output=embed"></iframe>
+        </div>
+        <p class="cprght">North Phoenix Pain Relief Center. 2013, All rights reserved.</p>
+        <p class="md_by">Made by <a href="http://pieoneers.com">Pieoneers</a></p>
+      </div>
+    </footer><!-- #footer -->
+    <div class="tstmnl_wndw">
+      <div class="tstmnl_form">
+        <div class="head">
+          <h6>Write a Review</h6>
+        </div>
+        <form id="testimonial-form">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" required="required">
+          <label for="email">Your e-mail</label>
+          <input type="email" id="email" name="email" required="required">
+          <input name="email_confirmation">
+          <label for="career">Career</label>
+          <input type="text" id="career" name="career">
+          <label for="age">Age</label>
+          <input type="text" id="age" name="age">
+          <label for="message">Message</label>
+          <textarea type="text" id="message" name="message" required="required"></textarea>
+          <input type="submit" value="send request" class="btn">
+        </form>
+        <a class="close"></a>
+      </div>
+    </div>
+  </body>
+</html>

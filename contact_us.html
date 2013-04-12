@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>North Phoenix Pain Relief Center</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="stylesheets/application.less" rel="stylesheet/less" type="text/css">
+    <script type="text/javascript" src="javascripts/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="javascripts/less-1.3.3.min.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.validate.min.js"></script>
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script>
+      $(document).ready(function(){
+        var $form = $("#contact-form");
+        
+        $form.find('input[name=email_confirmation]').hide();
+        $form.validate();
+        $form.submit(function (event) {
+          event.preventDefault();
+
+          if ($form.valid()) {
+            $.ajax('https://npprc.herokuapp.com/contact', { data: $form.serialize() }, {
+              dataType: 'jsonp'
+            });
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <div id="wrapper">
+      <header id="header">
+        <div class="inner">
+          <a href="index.html" class="logo"></a>
+          <p class="phn">Call us 602-482-2282</p>
+          <ul class="scl">
+            <li><a class="fb" target="_blank" href="https://www.facebook.com/NorthPhoenixPainRelief"></a></li>
+            <li><a class="tw" target="_blank" href="https://twitter.com/AZPainRelief"></a></li>
+            <li><a class="pn" target="_blank" href="http://pinterest.com/AZPainRelief/"></a></li>
+            <li><a class="in" target="_blank" href="http://linkedin.com/company/north-phoenix-pain-relief-center"></a></li>
+            <li><a class="yt" target="_blank" href="http://www.youtube.com/user/northphoenixpain"></a></li>
+            <li><a class="ml" href="mailto:northphoenixpainreliefcenter@yahoo.com"></a></li>
+          </ul>
+          <a href="physician_provider_referral.html" class="rfrrl">Physician/Attorney Referral</a>
+          <nav>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="treatments.html">Treatments</a></li>
+              <li><a href="become_a_patient.html">Become a patient</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="http://npprc.wordpress.com/">Blog</a></li>
+              <li><a href="contact_us.html">Contact us</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="ln"></div>
+      </header><!-- #header-->
+      <div id="container" class="cu">
+        <div class="bnnr">
+          <h1>Contact us</h1>
+        </div>
+        <div class="map">
+          <iframe width="600" height="440" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=North+Phoenix+Pain+Relief+Center&amp;aq=&amp;sll=33.627231,-112.012114&amp;sspn=0.015223,0.033023&amp;ie=UTF8&amp;hq=North+Phoenix+Pain+Relief+Center&amp;hnear=&amp;t=m&amp;cid=10962981693543278355&amp;ll=33.649779,-112.010593&amp;spn=0.045727,0.102825&amp;z=13&amp;iwloc=A&amp;output=embed"></iframe>
+        </div>
+        <div class="content">
+          <article>
+            <p>The North Phoenix Pain Relief Center provides care for patients in Phoenix, Scottsdale, Peoria, Glendale, Chandler, Tempe, Avondale, Goodyear, El Mirage, Surprise, Buckeye, Guadalupe, Ahwatukee, Maricopa, Apache Junction, Paradise Valley and Fountain Hills</p>
+          </article>
+          <article>
+            <h3>Contact Us by Email</h3>
+            <form id="contact-form">
+              <div>
+                <label for="first_name">First name</label>
+                <input type="text" id="first_name" name="first_name" required="required">
+              </div>
+              <div>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required="required">
+                <input name="email_confirmation">
+              </div>
+              <div>
+                <label for="message">Message</label>
+                <textarea type="text" id="message" name="message" required="required"></textarea>
+              </div>
+              <input type="submit" value="send request" class="btn">
+            </form>
+          </article>
+        </div>
+        <aside>
+          <div class="call">
+            <div class="head">
+              <h6>Call us at</h6>
+            </div>
+            <p class="phone">602-482-2282<br/>1-855-FIX-PAIN</p>
+          </div>
+          <div class="hours">
+            <div class="head">
+              <h6>Office hours</h6>
+            </div>
+            <ul>
+              <li><span>Monday</span><span class="mode">8am to 7pm</span></li>
+              <li><span>Tuesday</span><span class="mode">8am to 7pm</span></li>
+              <li><span>Wednesday</span><span class="mode">8am to 7pm</span></li>
+              <li><span>Thursday</span><span class="mode">8am to 7pm</span></li>
+              <li><span>Friday</span><span class="mode">8am to 7pm</span></li>
+              <li><span>Saturday</span><span class="mode">Closed</span></li>
+              <li><span>Sunday</span><span class="mode">Closed</span></li>
+            </ul>
+          </div>
+          <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FNorthPhoenixPainRelief&amp;width=300&amp;height=258&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color=%23d2cdb7&amp;header=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:258px;" allowTransparency="true"></iframe>
+        </aside>
+      </div><!-- #content-->
+    </div><!-- #wrapper -->
+    <footer id="footer" class="cu">
+      <div class="inner">
+        <p class="cprght">North Phoenix Pain Relief Center. 2013, All rights reserved.</p>
+        <p class="md_by">Made by <a href="http://pieoneers.com">Pieoneers</a></p>
+      </div>
+    </footer><!-- #footer -->
+  </body>
+</html>
