@@ -232,7 +232,7 @@ html {
               margin: 12px auto 0;
             }
           }
-          .facts, .faq, .hours, .rqst, .phlsph {
+          .facts, .faq, .hours, .rqst, .phlsph, .sbscrb {
             border: 1px solid @goldborder;
             padding: 15px 15px 30px;
             margin-bottom: 20px;
@@ -268,6 +268,47 @@ html {
               color: @gold;
             }
           }
+          .sbscrb {
+            p {
+              padding: 15px 0;
+              line-height: 20px;
+            }
+            .disclaimer {
+              padding-bottom: 0;
+
+              span {
+                color: #ba0000;
+              }
+            }
+            .fsBody.fsEmbed {
+              .fsForm.fsFormFree.fsSingleColumn {
+                margin: 0;
+                background: none !important;
+                border: none !important;
+                .fsRowBody {
+                  padding: 0;
+                  background: none !important;
+
+                  label {
+                    display: block;
+                    margin-bottom: 6px;
+                    font-size: 11pt;
+                    color: #3d4d52;
+                    font-family: Georgia, sans-serif;
+                    font-weight: 400;
+                  }
+                }
+              }
+              .fsSubmit {
+                padding: 0;
+                margin-top: 0;
+                background: none;
+              }
+            }
+            a[title="HTML Form Generator"] {
+              visibility: hidden;
+            }
+          }
         }
       }
     }
@@ -278,7 +319,7 @@ html {
         margin-bottom: 6px;
         font-size: 11pt;
       }
-      input[type="text"], input[type="email"], textarea {
+      input[type="text"], input[type="email"], textarea, .fsField.fsFormatEmail.fsRequired {
         border: 1px solid @goldborder;
         width: 256px;
         font-family: Georgia, sans-serif;
@@ -286,6 +327,7 @@ html {
         padding: 5px;
         line-height: 24pt;
         margin-bottom: 18px;
+        background-image: none;
       }
       input[type="text"], input[type="email"] {
         height: 20px;
@@ -332,7 +374,7 @@ html {
         position: relative;
       }
     }
-    .btn {
+    .btn, .fsSubmitButton {
       display: block;
       width: 268px;
       height: 57px;
